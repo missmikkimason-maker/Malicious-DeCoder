@@ -16,6 +16,8 @@ if (fs.existsSync(envPath)) {
     if (separatorIndex === -1) continue;
 
     const key = line.slice(0, separatorIndex).trim();
+    if (!key) continue;
+
     let value = line.slice(separatorIndex + 1).trim();
 
     const isDoubleQuoted = isWrappedInQuotes(value, '"');
