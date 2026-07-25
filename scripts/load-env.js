@@ -26,12 +26,19 @@ const parseValue = (rawValue) => {
       .replace(/\\\\/g, "\\");
   }
 
-  const commentIndex = value.search(/\s#/);
-  if (commentIndex === -1) {
-    return value;
+  let commentIndex = -1;
+
+  for (let index = 0; index < value.length; index += 1) {
+    if (value[index] === "#" && value[index - 1] !== "\\") {
+      commentIndex = index;
+      break;
+    }
   }
 
-  return value.slice(0, commentIndex).trimEnd();
+  const unquotedValue =
+    commentIndex === -1 ? value : value.slice(0, commentIndex).trimEnd();
+
+  return unquotedValue.replace(/\\#/g, "#");
 };
 
 if (fs.existsSync(envPath)) {
