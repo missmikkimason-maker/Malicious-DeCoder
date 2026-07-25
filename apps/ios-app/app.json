@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Malicious DeCoder iOS",
+    "slug": "malicious-decoder-ios",
+    "version": "1.0.0",
+    "platforms": [
+      "ios"
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.missmikkimason.maliciousdecoder.ios",
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
