@@ -2,6 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const envPath = path.join(process.cwd(), ".env");
+const isWrappedInQuotes = (value, quote) =>
+  value.length >= 2 && value.startsWith(quote) && value.endsWith(quote);
 
 if (fs.existsSync(envPath)) {
   const envFile = fs.readFileSync(envPath, "utf8");
@@ -16,10 +18,8 @@ if (fs.existsSync(envPath)) {
     const key = line.slice(0, separatorIndex).trim();
     let value = line.slice(separatorIndex + 1).trim();
 
-    const isDoubleQuoted =
-      value.length >= 2 && value.startsWith('"') && value.endsWith('"');
-    const isSingleQuoted =
-      value.length >= 2 && value.startsWith("'") && value.endsWith("'");
+    const isDoubleQuoted = isWrappedInQuotes(value, '"');
+    const isSingleQuoted = isWrappedInQuotes(value, "'");
 
     if (isDoubleQuoted || isSingleQuoted) {
       value = value.slice(1, value.length - 1);
