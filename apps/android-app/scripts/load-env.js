@@ -16,11 +16,13 @@ if (fs.existsSync(envPath)) {
     const key = line.slice(0, separatorIndex).trim();
     let value = line.slice(separatorIndex + 1).trim();
 
-    if (
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
-      value = value.slice(1, -1);
+    const isDoubleQuoted =
+      value.length >= 2 && value.startsWith('"') && value.endsWith('"');
+    const isSingleQuoted =
+      value.length >= 2 && value.startsWith("'") && value.endsWith("'");
+
+    if (isDoubleQuoted || isSingleQuoted) {
+      value = value.slice(1, value.length - 1);
     }
 
     if (process.env[key] === undefined) {
