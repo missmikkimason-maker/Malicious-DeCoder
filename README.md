@@ -10,15 +10,28 @@ This repo now includes two Expo apps:
 
 ### Build locally
 
+Install dependencies once for both apps from the repository root:
+
+```bash
+npm install
+```
+
+Start the iOS or Android app:
+
+```bash
+npm run ios
+npm run android
+```
+
+Or start them directly from each app directory:
+
 ```bash
 cd apps/ios-app
-npm install
 npm run start
 ```
 
 ```bash
 cd apps/android-app
-npm install
 npm run start
 ```
 

@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# OS
+.DS_Store
+
+# Environment
+.env

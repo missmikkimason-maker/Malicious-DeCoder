@@ -1,0 +1,17 @@
+{
+  "name": "malicious-decoder",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "android": "npm run start --workspace=apps/android-app",
+    "ios": "npm run start --workspace=apps/ios-app",
+    "start:android": "npm run android",
+    "start:ios": "npm run ios",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "typecheck:android": "npm run typecheck --workspace=apps/android-app",
+    "typecheck:ios": "npm run typecheck --workspace=apps/ios-app"
+  }
+}
