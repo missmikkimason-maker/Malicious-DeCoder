@@ -47,6 +47,7 @@ npm run start
 - App icon and splash assets must meet platform requirements:
   - iOS: App Store icon at 1024×1024 px; Xcode will generate other sizes from the source.
   - Android: Adaptive icon foreground at 1024×1024 px, background color/image, and optional monochrome layer.
+- Replace the placeholder `assets/icon.png`, `assets/splash-icon.png`, and Android adaptive icon layers with branded artwork before final submission.
 
 ### Automated releases
 
