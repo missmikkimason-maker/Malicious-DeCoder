@@ -1,20 +1,40 @@
 {
   "expo": {
-    "name": "Malicious DeCoder iOS",
-    "slug": "malicious-decoder-ios",
+    "name": "Device Detox",
+    "slug": "device-detox-ios",
     "version": "1.0.0",
+    "owner": "missmikkimason-maker",
     "platforms": [
       "ios"
     ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F9FAFB",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F9FAFB"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/device-detox-ios"
+    },
     "ios": {
-      "bundleIdentifier": "com.missmikkimason.maliciousdecoder.ios",
-      "supportsTablet": true
+      "bundleIdentifier": "com.missmikkimason.devicedetox.ios",
+      "buildNumber": "1.0.0.1",
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
     }
   }
 }

@@ -1,16 +1,28 @@
 {
   "expo": {
-    "name": "Malicious DeCoder Android",
-    "slug": "malicious-decoder-android",
+    "name": "Device Detox",
+    "slug": "device-detox-android",
     "version": "1.0.0",
+    "owner": "missmikkimason-maker",
     "platforms": [
       "android"
     ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F9FAFB",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F9FAFB"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/device-detox-android"
+    },
     "android": {
-      "package": "com.missmikkimason.maliciousdecoder.android",
+      "package": "com.missmikkimason.devicedetox.android",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +32,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
     }
   }
 }
