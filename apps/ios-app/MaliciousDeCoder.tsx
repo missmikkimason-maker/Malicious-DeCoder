@@ -68,10 +68,10 @@ export default function MaliciousDeCoder() {
     <ScrollView contentContainerStyle={containerStyle}>
       <View style={styles.content}>
         <Text style={[styles.title, { color: isDark ? '#F3F4F6' : '#111827' }]}>
-          Malicious DeCoder
+          Device Detox
         </Text>
         <Text style={secondaryStyle}>
-          Paste suspicious text, logs, or encoded snippets below to identify patterns.
+          Paste text from an unwanted installation or suspicious log below to identify patterns.
         </Text>
 
         <TextInput
