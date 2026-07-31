@@ -1,20 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import MaliciousDeCoder from './MaliciousDeCoder';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Malicious DeCoder Android app is ready to publish.</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <MaliciousDeCoder />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
